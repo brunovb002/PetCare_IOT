@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "author": "PetVital Monitor - CLYVO VET",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 200,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dhtCorporal",
+      "top": 0,
+      "left": 0,
+      "attrs": { "label": "Temp Corporal" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dhtAmbiente",
+      "top": 0,
+      "left": 200,
+      "attrs": { "label": "Temp Ambiente" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potFreq",
+      "top": 450,
+      "left": 0,
+      "attrs": { "label": "Freq Cardiaca" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potHidrat",
+      "top": 450,
+      "left": 150,
+      "attrs": { "label": "Hidratacao" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potAtivid",
+      "top": 450,
+      "left": 300,
+      "attrs": { "label": "Atividade" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potComida",
+      "top": 450,
+      "left": 450,
+      "attrs": { "label": "Vasilha Comida" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potAgua",
+      "top": 450,
+      "left": 600,
+      "attrs": { "label": "Vasilha Agua" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnComeu",
+      "top": 450,
+      "left": 750,
+      "attrs": { "color": "green", "label": "Comeu" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnBebeu",
+      "top": 450,
+      "left": 850,
+      "attrs": { "color": "blue", "label": "Bebeu Agua" }
+    }
+  ],
+  "connections": [
+    ["esp:GND.1", "dhtCorporal:GND", "black",  []],
+    ["esp:3V3",   "dhtCorporal:VCC", "red",    []],
+    ["esp:D15",   "dhtCorporal:SDA", "yellow", []],
+
+    ["esp:GND.2", "dhtAmbiente:GND", "black",  []],
+    ["esp:3V3",   "dhtAmbiente:VCC", "red",    []],
+    ["esp:D4",    "dhtAmbiente:SDA", "yellow", []],
+
+    ["esp:GND.3", "potFreq:GND",  "black",  []],
+    ["esp:3V3",   "potFreq:VCC",  "red",    []],
+    ["esp:D34",   "potFreq:SIG",  "orange", []],
+
+    ["esp:GND.4", "potHidrat:GND", "black",  []],
+    ["esp:3V3",   "potHidrat:VCC", "red",    []],
+    ["esp:D35",   "potHidrat:SIG", "orange", []],
+
+    ["esp:GND.5", "potAtivid:GND", "black",  []],
+    ["esp:3V3",   "potAtivid:VCC", "red",    []],
+    ["esp:D32",   "potAtivid:SIG", "orange", []],
+
+    ["esp:GND.6", "potComida:GND", "black",  []],
+    ["esp:3V3",   "potComida:VCC", "red",    []],
+    ["esp:D36", "potComida:SIG", "orange", []],
+
+    ["esp:GND.7", "potAgua:GND", "black",  []],
+    ["esp:3V3",   "potAgua:VCC", "red",    []],
+    ["esp:D39", "potAgua:SIG",   "orange", []],
+
+    ["esp:GND.8", "btnComeu:2.l", "black", []],
+    ["esp:D18",   "btnComeu:1.l", "green", []],
+
+    ["esp:GND.9", "btnBebeu:2.l", "black", []],
+    ["esp:D19",   "btnBebeu:1.l", "blue",  []]
+  ]
+}
