@@ -1,0 +1,64 @@
+[
+    {
+        "id": "7b7944e7446fcdb0",
+        "type": "ui_table",
+        "z": "f87f2351f7f9cc21",
+        "group": "pv_grp_tutor",
+        "name": "Tabela Registros Tutor",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "evento",
+                "title": "Evento",
+                "width": "150",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "horario",
+                "title": "Horário",
+                "width": "200",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 660,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "pv_grp_tutor",
+        "type": "ui_group",
+        "name": "Registro do Tutor",
+        "tab": "pv_ui_tab",
+        "order": 4,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "pv_ui_tab",
+        "type": "ui_tab",
+        "name": "PetVital Monitor",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
+        "id": "274a66b5b0e59d42",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-node-ui-table": "0.4.5",
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
