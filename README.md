@@ -124,6 +124,13 @@ O sistema cruza múltiplos dados para gerar alertas contextualizados:
 
 \---
 
+## 🔗 Simulação Wokwi
+
+Visualização online do circuito (referência):  
+👉 https://wokwi.com/projects/464927875055063041
+
+Para rodar localmente com dados em tempo real, siga as instruções em [Como Executar](#como-executar).
+
 ## 🚀 Como Executar
 
 ### Pré-requisitos
